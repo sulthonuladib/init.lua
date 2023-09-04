@@ -9,14 +9,8 @@ return require('packer').startup(function(use)
     requires = { { 'nvim-lua/plenary.nvim' } }
   }
 
-  use({
-    'rose-pine/neovim',
-    as = 'rose-pine',
-    config = function()
-      require("rose-pine").setup()
-      vim.cmd('colorscheme rose-pine')
-    end
-  })
+
+  use { "ellisonleao/gruvbox.nvim" }
   use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
   use('nvim-treesitter/playground')
   use('theprimeagen/harpoon')
@@ -56,5 +50,4 @@ return require('packer').startup(function(use)
   use 'nvim-tree/nvim-web-devicons'
   use 'karb94/neoscroll.nvim'
   use 'github/copilot.vim'
-  use 'andweeb/presence.nvim'
 end)
